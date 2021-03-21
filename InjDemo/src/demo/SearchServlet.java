@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -16,7 +15,6 @@ import jakarta.servlet.http.HttpSession;
 /**
  * Servlet implementation class SearchServlet
  */
-@WebServlet("/Search")
 public class SearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -37,7 +35,7 @@ public class SearchServlet extends HttpServlet {
 		System.out.println(mod.name+"   "+ mod.mobno+"    "+mod.address+"    "+mod.amount);
 		HttpSession session = request.getSession();
 		session.setAttribute("mobno", mobno);
-		session.setAttribute("amount", mod.amount);
+		request.setAttribute("amount", mod.amount);
 		request.setAttribute("name", mod.name);
 		request.setAttribute("address", mod.address);
 		RequestDispatcher rd=request.getRequestDispatcher("ShowCustomer.jsp");

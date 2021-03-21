@@ -9,6 +9,6 @@
 <body>
 <br><br>
 ${result}<br><br>
-<a href="Admin.jsp">back</a>
+<a href="/InjDemo/Admin.jsp">back</a>
 </body>
 </html>

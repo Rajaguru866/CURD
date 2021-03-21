@@ -7,7 +7,7 @@
 <title>Login</title>
 </head>
 <body>
-<form action="admin" method="post">
+<form action="Admin" method="post">
 Username<input type="text" name="uname"><br><br>
 Password<input type="password" name="pass"><br><br>
 <input type="submit" value="submit">

@@ -7,11 +7,21 @@
 <title>Admin</title>
 </head>
 <body>
+<%
+	response.setHeader("cache-control","no-cache,no-store,must-revalidate");
+	String uname = (String) session.getAttribute("uname");
+	String pass = (String) session.getAttribute("pass");
+	if(uname==null || uname.equals("admin")==false || pass.equals("me")==false )
+	{
+		response.sendRedirect("Login.jsp");
+	}
 
+%>
 <a href="CreateCustomer.jsp">Create Customer</a><br><br>
-<form action="Search" method="get">
+<form action="Admin/Search" method="get">
 Enter the Customer Mobile Number<input type="text" name="mobno">
-<input type="submit" value="submit">
+<input type="submit" value="submit" formaction="Admin/Search"><br><br>
+<input type="submit" value="logout" formaction="Logout">
 </form>
 </body>
 </html>

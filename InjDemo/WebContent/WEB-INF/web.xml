@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>InjDemo</display-name>
+  <welcome-file-list>
+    <welcome-file>Login.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>Admin</servlet-name>
+  <servlet-class>demo.AdminServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>AddAmount</servlet-name>
+  <servlet-class>demo.AddAmountServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>Create</servlet-name>
+  <servlet-class>demo.CreateServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>Delete</servlet-name>
+  <servlet-class>demo.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>Search</servlet-name>
+  <servlet-class>demo.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>Repay</servlet-name>
+  <servlet-class>demo.UpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>Logout</servlet-name>
+  <servlet-class>demo.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>ShowCustomer</servlet-name>
+  <jsp-file>/ShowCustomer.jsp</jsp-file>
+  </servlet>
+  <servlet>
+  <servlet-name>Result</servlet-name>
+  <jsp-file>/Result.jsp</jsp-file>
+  </servlet>
+  
+  
+  
+  
+    
+  <servlet-mapping>
+  <servlet-name>Admin</servlet-name>
+  <url-pattern>/Admin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>AddAmount</servlet-name>
+  <url-pattern>/Admin/Search/AddAmount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>Create</servlet-name>
+  <url-pattern>/Admin/Create</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>Delete</servlet-name>
+  <url-pattern>/Admin/Search/Delete</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>Search</servlet-name>
+  <url-pattern>/Admin/Search</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>Repay</servlet-name>
+  <url-pattern>/Admin/Search/Repay</url-pattern>
+  </servlet-mapping>  
+  <servlet-mapping>
+  <servlet-name>ShowCustomer</servlet-name>
+  <url-pattern>/Admin/ShowCustomer.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>Result</servlet-name>
+  <url-pattern>/Admin/Search/Result.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  <servlet-name>Result</servlet-name>
+  <url-pattern>/Admin/Result.jsp</url-pattern>
+  </servlet-mapping>  
+  <servlet-mapping>
+  <servlet-name>Logout</servlet-name>
+  <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>  
+  
+</web-app>

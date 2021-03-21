@@ -3,10 +3,10 @@ package demo;
 import java.io.IOException;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 
 
@@ -14,7 +14,6 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class AdminServlet
  */
-@WebServlet("/admin")
 public class AdminServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -35,6 +34,9 @@ public class AdminServlet extends HttpServlet {
 		String pass=request.getParameter("pass");
 		if(uname.equals("admin") && pass.equals("me"))
 		{
+			HttpSession session = request.getSession();
+			session.setAttribute("uname", uname);
+			session.setAttribute("pass", pass);
 			response.sendRedirect("Admin.jsp");
 		}
 		else

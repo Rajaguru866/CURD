@@ -18,7 +18,7 @@
 
 %>
 <a href="CreateCustomer.jsp">Create Customer</a><br><br>
-<form action="Admin/Search" method="get">
+<form action="" method="get">
 Enter the Customer Mobile Number<input type="text" name="mobno">
 <input type="submit" value="submit" formaction="Admin/Search"><br><br>
 <input type="submit" value="logout" formaction="Logout">

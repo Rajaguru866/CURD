@@ -10,15 +10,15 @@ import java.sql.Statement;
 
 public class Dao {
 	
-	static String url = "jdbc:mysql://localhost:3306/zoho?" + "autoReconnect=true&useSSL=false";
-	static String uname = "root";
-	static String pass = "mysql";
+	static String url = "jdbc:postgresql://localhost/zoho?" + "autoReconnect=true&useSSL=false";
+	static String uname = "postgres";
+	static String pass = "postgresql";
 	
 	public DetailModel getDet(String mobno) throws ClassNotFoundException, SQLException
 	{	
 		DetailModel mod = new DetailModel();
 		System.out.println("Hello");
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("org.postgresql.Driver");
 		Connection con = null;
 		Statement st = null;
 		try {
@@ -50,7 +50,7 @@ public class Dao {
 	{
 		boolean returnValue = false;
 		int count;
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("org.postgresql.Driver");
 		Connection con = null;
 		Statement st = null;
 		try {
@@ -78,7 +78,7 @@ public class Dao {
 	{
 		boolean returnValue = false;
 		int count;
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("org.postgresql.Driver");
 		Connection con = null;
 		PreparedStatement st = null;
 		try {
@@ -111,7 +111,7 @@ public class Dao {
 	{
 		boolean returnValue = false;
 		int count;
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("org.postgresql.Driver");
 		Connection con = null;
 		Statement st = null;
 		try {
@@ -139,7 +139,7 @@ public class Dao {
 	{
 		boolean returnValue = false;
 		int count;
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("org.postgresql.Driver");
 		Connection con = null;
 		Statement st = null;
 		try {

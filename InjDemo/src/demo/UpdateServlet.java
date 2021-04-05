@@ -36,7 +36,7 @@ public class UpdateServlet extends HttpServlet {
 		String mobno =(String) session.getAttribute("mobno");
 		String depositStr = request.getParameter("deposit");
 		int deposit = Integer.parseInt(depositStr);
-		Dao dao = new Dao();
+		Dao dao = Dao.getDao();
 		System.out.println(mobno+"********");
 	    boolean returnValue = false;
 		try {

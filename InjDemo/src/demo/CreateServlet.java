@@ -34,7 +34,7 @@ public class CreateServlet extends HttpServlet {
 		mod.address=request.getParameter("address");
 		mod.amount=0;
 		
-		Dao dao = new Dao();
+		Dao dao = Dao.getDao();
 		try {
 			returnValue = dao.createDet(mod);
 		} catch (ClassNotFoundException | SQLException e) {

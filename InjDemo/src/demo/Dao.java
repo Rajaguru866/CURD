@@ -10,10 +10,32 @@ import java.sql.Statement;
 
 public class Dao {
 	
+	static Dao dao;
 	static String url = "jdbc:postgresql://localhost/zoho?" + "autoReconnect=true&useSSL=false";
 	static String uname = "postgres";
 	static String pass = "postgresql";
 	
+	//Here Dao is used only for database connection, there is no need to create multiple class for all, so we use Singleton pattern
+
+	public static Dao getDao()
+	{
+		if(dao == null)
+		{ 
+			synchronized(Dao.class)
+			{
+				if(dao == null)
+				{
+					dao = new Dao();
+				}
+			}
+		}
+		return dao;
+	}
+	
+	private Dao()
+	{
+		
+	}
 	public DetailModel getDet(String mobno) throws ClassNotFoundException, SQLException
 	{	
 		DetailModel mod = new DetailModel();
@@ -160,9 +182,6 @@ public class Dao {
 			con.close();
 			
 		}
-		
-		
-		
 		return returnValue;
 	}
 

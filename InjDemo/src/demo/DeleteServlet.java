@@ -30,7 +30,7 @@ public class DeleteServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
 		String mobno = (String) session.getAttribute("mobno");
-		Dao dao = new Dao();
+		Dao dao = Dao.getDao();
 		boolean returnValue=false;
 		try {
 			returnValue = dao.deleteDet(mobno);

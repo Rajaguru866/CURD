@@ -25,7 +25,7 @@ public class SearchServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String mobno=request.getParameter("mobno");
 		DetailModel mod=null;
-		Dao dao=new Dao();
+		Dao dao = Dao.getDao();
 		try {
 			mod=dao.getDet(mobno);
 		} catch (ClassNotFoundException | SQLException e) {

@@ -32,7 +32,7 @@ public class AddAmountServlet extends HttpServlet {
 		String mobno =(String) session.getAttribute("mobno");
 		String amountstr = request.getParameter("deposit");
 		int amount = Integer.parseInt(amountstr);
-		Dao dao = new Dao();
+		Dao dao = Dao.getDao();
 		System.out.println(mobno+"********");
 	    boolean returnValue = false;
 		try {
